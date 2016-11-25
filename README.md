@@ -42,5 +42,5 @@ Use the same output from Exercise 2 and include the commission amount for each l
 Extra Credit
 --
 - Write sql statements to create backing tables for Invoice and Invoice Item.
-- Improve the user interface with a menu, searching and editing.
+- Improve the user interface with a menu, searching, inserting and editing (CRUD).
 - Save the invoice data generated to a file on exit and then read in the file (if avaliable) on next startup.
