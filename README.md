@@ -20,7 +20,7 @@ Exercise 2
 --
 Calculate the SubTotal and Total for Invoice.
 
-Use the same output from Exercise 1 and inlcude the Invoice number, Company Name, Invoice SubTotal, Invoice Total.
+Use the same output from Exercise 1 and include the Invoice number, Company Name, Invoice SubTotal, Invoice Total.
 
 * Invoice SubTotal; Will be equal to the summation of line items Total
 * Invoice Total; will be equal to SubTotal plus the Shipping
@@ -34,10 +34,10 @@ Round the commission amount to the nearest 50 pence.
 
 Use the same output from Exercise 2 and include the commission amount for each line and a total commission for the invoice.
 
-* £10.25 = £10.00
-* £10.30 = £10.50
-* £10.60 = £10.50
-* £10.90 = £11.00
+* Â£10.25 = Â£10.00
+* Â£10.30 = Â£10.50
+* Â£10.60 = Â£10.50
+* Â£10.90 = Â£11.00
 
 Extra Credit
 --
