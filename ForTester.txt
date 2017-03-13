@@ -1,0 +1,38 @@
+Use below template to generate fake json at json-generator.com
+
+[
+  {
+    'repeat(80)': {
+      InvoiceNo: '{{integer(2000, 5000)}}',
+      CompanyName: '{{company()}}',
+      CompanyName: function (tags) {
+		var companies = ["Cool Company", "Coffee R Us", "Ramazon", "Tisco", "MicroHard", "Pear", "FujiTv", "Lowrise"];
+		return companies[tags.integer(0, companies.length - 1)];
+	  },
+      BillingContact: '{{firstName()}} {{surname()}}',
+      BillingRoad: '{{integer(100, 999)}} {{street()}}',
+      BillingCity: '{{city()}}',
+      BillingCounty: '{{state()}}',
+      BillingPostCode: 'HP{{integer(10, 99)}} {{integer(1, 9)}}SL',
+      PostedDate: '{{date(new Date(2014, 0, 1), new Date()).getTime()}}',
+      ShippingDate: '{{date(new Date(2014, 0, 1), new Date()).getTime()}}',
+      RequisitionDate: '{{date(new Date(2014, 0, 1), new Date()).getTime()}}',
+      TaxRate: '{{integer(1, 20)}}',
+      LineItems: [
+        {
+          'repeat(1, 15)': {
+			Sku: function (tags) {
+			  var skus = ['PRA101', 'PRA019', 'PB121', 'CAN123', 'TRA863', 'PAN040', 'SAM1135', 'CAN465', 'NEN124', 'BON128', 'PAN222', 'APP654', 'INT100', 'FAF345', 'LOL090'];
+			  return skus[tags.integer(0, skus.length - 1)];
+			},
+            LineText: "{{lorem(4, 'words')}}",
+            Taxable: '{{bool()}}',
+            Quantity: '{{integer(1, 300)}}',
+            UnitPrice: '{{floating(0.15, 350, 2, "0.00")}}',
+            Discount: '{{integer(0, 35)}}'
+          }
+        }
+      ]
+    }
+  }
+]

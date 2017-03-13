@@ -6,7 +6,7 @@ using DeveloperTest.Models;
 
 namespace DeveloperTest
 {
-    public class Repo
+    public class RandomRepository : IRepository
     {
         public IEnumerable<Invoice> All()
         {
@@ -31,8 +31,7 @@ namespace DeveloperTest
                                                             rnd.Next(1000,
                                                                      9999)),
                                  CompanyName = _companyNames[rnd.Next(_companyNames.Length)],
-                                 LineItems = GetItems(rnd.Next(1,
-                                                               10)),
+                                 LineItems = GetItems(rnd.Next(1, 10)),
                                  PostedDate = DateTime.UtcNow,
                                  RequisitionDate = reqDate,
                                  Shipping = (decimal) Math.Round(rnd.NextDouble()*35, 2),
@@ -52,10 +51,12 @@ namespace DeveloperTest
 
             while (i++ < itemCount)
             {
+                var productIdx = rnd.Next(_products.Count());
                 items.Add(new InvoiceItem
                           {
                               Discount = (byte) Math.Floor(rnd.NextDouble()*30),
-                              LineText = _products[rnd.Next(_products.Count())],
+                              Sku = _productSkus[productIdx],
+                              LineText = _products[productIdx],
                               Quantity = rnd.Next(1,99),
                               UnitPrice = (decimal) Math.Round(rnd.NextDouble()*600,2),
                               Taxable = Math.Round(rnd.NextDouble(), MidpointRounding.ToEven) > 0
@@ -109,6 +110,17 @@ namespace DeveloperTest
                                                 "Buckinghamshire",
                                                 "Berkshire"
                                             };
+
+        private readonly string[] _productSkus = new[]
+                                              {
+                                                  "PB101",
+                                                  "PRA019",
+                                                  "PB121",
+                                                  "CAN123",
+                                                  "TRA863",
+                                                  "PAN040",
+                                                  "SAM1135"
+                                              };
 
         private readonly string[] _products = new[]
                                               {

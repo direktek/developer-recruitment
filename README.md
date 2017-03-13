@@ -20,7 +20,7 @@ Exercise 2
 --
 Calculate the SubTotal and Total for Invoice.
 
-Use the same output from Exercise 1 and include the Invoice number, Company Name, Invoice SubTotal, Invoice Total.
+Use the same output from Exercise 1 and include the Invoice number, Company Name, Invoice SubTotal, Invoice Total. This view should allow the user to easily see all invoices.
 
 * Invoice SubTotal; Will be equal to the summation of line items Total
 * Invoice Total; will be equal to SubTotal plus the Shipping
@@ -39,8 +39,25 @@ Use the same output from Exercise 2 and include the commission amount for each l
 * £10.60 = £10.50
 * £10.90 = £11.00
 
-Extra Credit
+Exercise 4 
 --
-- Write sql statements to create backing tables for Invoice and Invoice Item.
-- Improve the user interface with a menu, searching, inserting and editing (CRUD).
-- Save the invoice data generated to a file on exit and then read in the file (if avaliable) on next startup.
+Implement a new repository called JsonRepository for use instead of RandomRepository.
+This repository should read in the data contained within the "invoices.json" file and construct Invoices and InoviceItems for use within the program.
+
+Exercise 5
+--
+Add five new menu options to display each of the key stats:
+
+* Top 10 selling SKUs and amounts sold of each
+* Total tax to be collected
+* Total revenue by SKU
+* Average invoice value
+* Top 5 selling SKUs per company
+
+Exercise 6
+--
+Add a search interface.
+
+Exercise 7
+--
+Write the SQL statements to create tables for Invoice and Invoice Item.

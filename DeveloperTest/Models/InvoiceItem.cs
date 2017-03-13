@@ -3,6 +3,11 @@
     public class InvoiceItem
     {
         /// <summary>
+        /// Sku of purchased item
+        /// </summary>
+        public string Sku { get; set; }
+
+        /// <summary>
         /// Short Description of purchased item
         /// </summary>
         public string LineText { get; set; }
