@@ -56,8 +56,8 @@ Add five new menu options to display each of the key stats:
 
 Exercise 6
 --
-Add a search interface.
-
-Exercise 7
---
 Write the SQL statements to create tables for Invoice and Invoice Item.
+
+Exercise 7 (Bonus)
+--
+Add a search interface.
